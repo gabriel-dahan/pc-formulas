@@ -70,7 +70,7 @@ const F = [
         category: 'Son',
         title: 'Décalage Doppler',
         formula: '$|\\Delta f=f_R-f_E|$',
-        units: ['$f_R$ la fréquence du signal reçu', '$f_E$ la fréquence du signal émis'],
+        units: ['$\\Delta f$ le décalage de fréquence (décalage Doppler)', '$f_R$ la fréquence du signal reçu', '$f_E$ la fréquence du signal émis'],
         description: `<ul>
             <li>
                 si $E$ se rapproche : $f_R=\\frac{f_E}{1-\\frac{v}{c}}$ avec $v$ la vitesse de déplacement de l'émetteur, $c$ la vitesse de l'onde
