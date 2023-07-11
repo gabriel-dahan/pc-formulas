@@ -62,12 +62,16 @@ const initModals = () => {
             modalOverlay.classList.add('active');
         });
 
-        modalOverlay.addEventListener('click', () => {
+        const closeModal = () => {
             modal.classList.remove('active');
             modalOverlay.classList.remove('active');
-        });
+        }
+
+        document.addEventListener('wheel', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
     });
 }
+
 initModals()
 
 /* 
@@ -86,6 +90,7 @@ const select = new TomSelect('#categories', {
 });
 
 select.on('item_add', (value, item) => {
+    formulasContainer.innerHTML = '';
     F.forEach(f => {
         if(f.category === value) {
             addFormulaCard(f)
@@ -94,13 +99,8 @@ select.on('item_add', (value, item) => {
 });
 
 select.on('item_remove', (value, item) => {
-    F.forEach(f => {
-        if(f.category === value) {
-            document.querySelectorAll(`[data-category=${value}]`).forEach(element => {
-                element.remove();
-            });
-        }
-    });
+    formulasContainer.innerHTML = '';
+    
 });
 // ----------------------------- //
 
