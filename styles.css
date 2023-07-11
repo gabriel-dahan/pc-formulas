@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px 0;
+    width: 100%;
+    background: #161623;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formulas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#formulas > .formula-card {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    cursor: default;
+    transition: .5s;
+}
+
+#formulas > .formula-card:hover {
+    background: rgba(190, 190, 190, 0.247);
+}
+
+#formulas > .formula-card > .fcontainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#formulas > .formula-card > .fcontainer > .formula {
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.selectors > .categories {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.selectors > .categories > select {
+    outline: none;
+}
