@@ -44,7 +44,7 @@ let categories = [];
 
 F.forEach((f, i) => {
     addFormulaCard(f, i + 1);
-    if(!categories.includes(f.category)) {
+    if(!categories.includes(f.category) && f.category !== '') {
         categories.push(f.category);
     }
 });
@@ -89,19 +89,26 @@ const select = new TomSelect('#categories', {
 	create: true
 });
 
-select.on('item_add', (value, item) => {
+const reloadCards = (value, item) => {
     formulasContainer.innerHTML = '';
-    F.forEach(f => {
-        if(f.category === value) {
-            addFormulaCard(f)
-        }
-    });
-});
-
-select.on('item_remove', (value, item) => {
-    formulasContainer.innerHTML = '';
+    const selected = select.items;
     
-});
+    const filtered = F.filter(f => selected.includes(f.category));
+
+    formulasContainer.innerHTML = '';
+    filtered.forEach((f, i) => addFormulaCard(f, i + 1));
+    renderMathInElement(document.body, {
+        delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+        ],
+        throwOnError : false
+    });
+    initModals();
+}
+
+select.on('item_add', reloadCards);
+select.on('item_remove', reloadCards)
 // ----------------------------- //
 
 // ------- VANILLA TILT ------- //
