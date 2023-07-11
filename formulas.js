@@ -317,62 +317,62 @@ const F = [
         theme: 'Physique',
         category: 'Relativité',
         title: 'Durée relative aux référentiels',
-        formula: '$$',
-        units: ['', ''],
+        formula: '$\\Delta t_m=\\gamma\\Delta t_p$',
+        units: ['$\\gamma$ le coefficient de dilatation des durées (voir carte suivante)', '$\\Delta t_m$ la durée d\'un phénomène mesurée dans $R$ (voir ci-dessous)', '$\\Delta t_p$ la durée propre de ce même phénomène, mesurée cette fois dans $R_p$'],
+        description: '$R$ est un référentiel galiléen et $R_p$ le référentiel galiléen propre d\'un objet. Ces référentiels sont en mouvement l\' par rapport à l\'autre.',
+        sidenotes: '$\\gamma$ est toujours strictement supérieur à 1 donc $\\Delta t_m$ est toujours strictement supérieur à $\\Delta t_p$. On parle de dilatation des durées.'
+    },
+    {
+        theme: 'Physique',
+        category: 'Relativité',
+        title: 'Coefficient de dilatation des durées',
+        formula: '$\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$',
+        units: ['$\\gamma$ le coefficient de dilatation des durées', '$v$ la vitesse de $R_p$ par rapport à $R$ (voir ci-dessous)', '$c$ la vitesse de la lumière dans le vide'],
+        description: '$R$ est un référentiel galiléen et $R_p$ le référentiel galiléen propre d\'un objet. Ces référentiels sont en mouvement l\' par rapport à l\'autre.',
+        sidenotes: null
+    },
+    {
+        theme: 'Physique',
+        category: 'Travail d\'une force',
+        title: 'Force constante (général)',
+        formula: '$W_{AB}(\\vec{F})=\\vec{F}\\cdot\\vec{AB}=F\\times AB\\times\\cos(\\theta)$',
+        units: ['$W_{AB}(\\vec{F})$ le travail d\'une force constante $\\vec{F}$', '$A$ et $B$ des points de l\'espace'],
+        description: null,
+        sidenotes: 'On parle de "force constante" si sa direction, son sens et sa valeur sont constants'
+    },
+    {
+        theme: 'Physique',
+        category: 'Travail d\'une force',
+        title: 'Cas du poids',
+        formula: '$W_{AB}(\\vec{P})=\\vec{P}\\cdot\\vec{AB}=m\\vec{g}(z_A-z_B)$',
+        units: ['$W_{AB}(\\vec{P})$ le travail du poids', '$\\vec{P}$ le poids d\'un objet', '$m$ la masse de cet objet', '$\\vec{g}$ le champ de pesanteur', '$z_A$ et $z_B$ les altitudes des points $A$ et $B$'],
         description: null,
         sidenotes: null
     },
     {
         theme: 'Physique',
-        category: '',
-        title: '',
-        formula: '$$',
-        units: ['', ''],
+        category: 'Travail d\'une force',
+        title: 'Cas d\'une force électrique constante',
+        formula: '$W_{AB}(\\vec{F}_E)=q\\vec{E}\\cdot\\vec{AB}$',
+        units: ['$W_{AB}(\\vec{F}_E)$ le travail de la force électrique $\\vec{F}_E$ qui s\'exerce sur une particule', '$q$ la charge électrique de cette particule', '$\\vec{E}$ le champ électrique dans lequel se déplace cette particule'],
         description: null,
         sidenotes: null
     },
     {
         theme: 'Physique',
-        category: '',
-        title: '',
-        formula: '$$',
+        category: 'Travail d\'une force',
+        title: 'Cas d\'une force de frottement',
+        formula: '$W_{AB}(\\vec{f})=\\vec{f}\\cdot\\vec{AB}=-f\\times AB$',
         units: ['', ''],
-        description: null,
+        description: 'En effet, pour une force de frottement, $\\theta=180°\\Rightarrow\\cos(\\theta)=-1$',
         sidenotes: null
     },
     {
         theme: 'Physique',
-        category: '',
-        title: '',
-        formula: '$$',
-        units: ['', ''],
-        description: null,
-        sidenotes: null
-    },
-    {
-        theme: 'Physique',
-        category: '',
-        title: '',
-        formula: '$$',
-        units: ['', ''],
-        description: null,
-        sidenotes: null
-    },
-    {
-        theme: 'Physique',
-        category: '',
-        title: '',
-        formula: '$$',
-        units: ['', ''],
-        description: null,
-        sidenotes: null
-    },
-    {
-        theme: 'Physique',
-        category: '',
-        title: '',
-        formula: '$$',
-        units: ['', ''],
+        category: 'Mécanique',
+        title: 'Energie potentielle de pesanteur et travail',
+        formula: '$E_{pB}-E_{pA}=-P(z_A-z_B)=-W_{AB}(\\vec{P})$',
+        units: [],
         description: null,
         sidenotes: null
     },
